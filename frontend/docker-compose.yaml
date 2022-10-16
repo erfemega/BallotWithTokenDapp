@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  next-app:
+    container_name: ballot-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ballot-client
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/usr/src
+      - /usr/src/node-modules
+      - /usr/src/.next

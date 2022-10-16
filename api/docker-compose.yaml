@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  nest-app:
+    container_name: ballot-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ballot-api
+    restart: always
+    ports:
+      - 3001:3001
+    volumes:
+      - ./:/usr/src
+      - /usr/src/node-modules
