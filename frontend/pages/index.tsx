@@ -8,6 +8,8 @@ const Home: NextPage = () => {
 
   const { connectWallet, address, error } = useWeb3();
 
+  error ? console.log(error) : null;
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-slate-100">
       {address ? (
